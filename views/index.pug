@@ -1,24 +1,28 @@
 html
   head
     title Discovery Player List
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
     script(src="scripts/sorttable.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
   body
-    h1 Discovery Player List
-    table.sortable
-      thead
-        tr
-          td Player Name
-          td System
-          td Ping
-          td Time online
-      tbody
-        -
-        each item in players
+    .container
+      h1.jumbotron Discovery Player List
+      table.sortable.table.table-striped
+        thead
           tr
-            td= item.name
-            td= item.system
-            td= item.ping
-            td= item.ta
+            td #[b Player Name]
+            td #[b System]
+            td #[b Ping]
+            td #[b Time online]
+        tbody
+          -
+          each item in players
+            tr
+              td= item.name
+              td= item.system
+              td= item.ping
+              td= item.ta
 
-    footer
-      p By MrHudson / Corile
+      footer.footer
+        p By MrHudson / Corile

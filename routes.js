@@ -33,7 +33,7 @@ module.exports = function(app, request, cheerio) {
           }while(playerlist[i-1].name.trim() != "")
 
           //DEBUG:
-          console.log(playerlist);
+          //console.log(playerlist);
 
           res.render("index.pug", {players: playerlist})
         })
